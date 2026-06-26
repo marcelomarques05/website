@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcus Thorne — Senior Cloud Architect</title>
+    <meta
+      name="description"
+      content="Senior Cloud Architect. Find me on LinkedIn, Credly, and beyond."
+    />
+    <meta property="og:title" content="Marcus Thorne — Senior Cloud Architect" />
+    <meta
+      property="og:description"
+      content="Senior Cloud Architect. Find me on LinkedIn, Credly, and beyond."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --radius: 0.5rem;
+        --background: #1a1a2e;
+        --foreground: #f2f2f2;
+        --surface: #353550;
+        --surface-elevated: #3d3d52;
+        --muted: #8b8b9a;
+        --muted-foreground: #b3b3c0;
+        --border: rgba(61, 61, 82, 0.6);
+        --accent: #4ba3ff;
+        --primary: #f2f2f2;
+      }
+
+      html {
+        color-scheme: dark;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      main {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: sans-serif;
+      }
+
+      .background {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: drift 60s linear infinite alternate;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(26, 26, 46, 0.6);
+      }
+
+      .gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, var(--background), rgba(26, 26, 46, 0.4), transparent);
+      }
+
+      section {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 28rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+
+      .card {
+        background-color: rgba(53, 53, 80, 0.4);
+        backdrop-filter: blur(20px);
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 1px solid var(--border);
+        animation: fadeUp 1.2s cubic-bezier(0.21, 0.6, 0.35, 1) both;
+        text-align: center;
+      }
+
+      @media (min-width: 640px) {
+        .card {
+          padding: 3rem;
+        }
+      }
+
+      .subtitle {
+        font-family: "Newsreader", ui-serif, Georgia, serif;
+        font-style: italic;
+        font-size: 1.125rem;
+        color: rgba(242, 242, 242, 0.8);
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        color: var(--foreground);
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        margin-bottom: 2.5rem;
+      }
+
+      @media (min-width: 640px) {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.875rem 1.25rem;
+        border-radius: 0.5rem;
+        background-color: rgba(53, 53, 80, 0.6);
+        border: 1px solid var(--border);
+        font-size: 0.875rem;
+        color: var(--foreground);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        background-color: rgba(61, 61, 82, 0.8);
+        border-color: rgba(75, 163, 255, 0.4);
+      }
+
+      a span:last-child {
+        color: var(--muted);
+        transition: all 0.3s ease;
+      }
+
+      a:hover span:last-child {
+        color: var(--accent);
+        transform: translateX(0.125rem);
+      }
+
+      .icon {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 0.75rem;
+        color: var(--muted);
+        transition: color 0.3s ease;
+      }
+
+      a:hover .icon {
+        color: var(--accent);
+      }
+
+      .copyright {
+        margin-top: 1.5rem;
+        text-align: center;
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: rgba(139, 139, 154, 0.7);
+      }
+
+      @keyframes drift {
+        from {
+          transform: scale(1.05) translateY(0);
+        }
+        to {
+          transform: scale(1.1) translateY(-2%);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Background landscape -->
+      <div class="background">
+        <img
+          src="./assets/hero-iceland-afternoon.jpg"
+          alt="Icelandic mountain range lit by late afternoon sun"
+          width="1920"
+          height="1080"
+        />
+        <div class="overlay"></div>
+        <div class="gradient"></div>
+      </div>
+
+      <!-- Card -->
+      <section>
+        <div class="card">
+          <p class="subtitle">Senior Cloud Architect</p>
+          <h1>Marcus Thorne</h1>
+
+          <nav>
+            <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
+              <span>
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6 z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                LinkedIn
+              </span>
+              <span>→</span>
+            </a>
+
+            <a href="https://www.credly.com/users/your-handle" target="_blank" rel="noreferrer">
+              <span>
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M3.85 8.62a4 4 0 0 0 4.78 4.78L12 13.65l3.37 3.37a4 4 0 0 0 4.78-4.78l-3.37-3.37 3.37-3.37a4 4 0 0 0-4.78-4.78L12 4.27 8.63.9a4 4 0 0 0-4.78 4.78l3.37 3.37z"
+                  ></path>
+                </svg>
+                Credly
+              </span>
+              <span>→</span>
+            </a>
+
+            <a href="https://github.com/your-handle" target="_blank" rel="noreferrer">
+              <span>
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c2.5-.5 5-2 5-7a5 5 0 0 0-1.5-3.5A4.5 4.5 0 0 0 19 3c-1 0-2.5-.5-3.5-1.5-1-1-2.5-1.5-5-1.5s-4 .5-5 1.5C5.5 2.5 4 3 3 3a4.5 4.5 0 0 0-.5 8.5 5 5 0 0 0-1.5 3.5c0 5 2.5 6.5 5 7a4.8 4.8 0 0 0-1 3.5v4"
+                  ></path>
+                  <path d="M9 18c-4.5 1.5-5-2.5-7-3"></path>
+                </svg>
+                GitHub
+              </span>
+              <span>→</span>
+            </a>
+          </nav>
+        </div>
+
+        <p class="copyright">© 2026</p>
+      </section>
+    </main>
+  </body>
+</html>
